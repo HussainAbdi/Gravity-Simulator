@@ -121,19 +121,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Celestial.cpp" />
+    <ClCompile Include="ButtonBase.cpp" />
+    <ClCompile Include="cScreen.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Manifold.cpp" />
-    <ClCompile Include="Planet.cpp" />
+    <ClCompile Include="MenuScreen.cpp" />
     <ClCompile Include="Precompiled.cpp" />
-    <ClCompile Include="Star.cpp" />
+    <ClCompile Include="SimulatorScreen.cpp" />
+    <ClCompile Include="SplashScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Celestial.h" />
-    <ClInclude Include="Manifold.h" />
-    <ClInclude Include="Planet.h" />
+    <ClInclude Include="ButtonBase.h" />
+    <ClInclude Include="buttons.h" />
+    <ClInclude Include="cScreen.h" />
+    <ClInclude Include="MenuScreen.h" />
     <ClInclude Include="Precompiled.h" />
-    <ClInclude Include="Star.h" />
+    <ClInclude Include="screens.h" />
+    <ClInclude Include="SimulatorScreen.h" />
+    <ClInclude Include="SplashScreen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
