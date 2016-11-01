@@ -13,6 +13,8 @@ Change image to fit window size with view.
 */
 
 #include "Precompiled.h" //Precompiled header to save compile time
+#include "screens.h" //Screens
+//#include "buttons.h" //Buttons
 using namespace std; //Normally should avoid 'using namespace', however, 'std' is an exception.
 
 int main() {
@@ -20,15 +22,12 @@ int main() {
 	//The std::vector class is an array that can be managed.
 	//Creating a vector class that points to different cScreen's which represent our screens.
 	vector<cScreen*> screens;
-	//We are setting our inital screen to screen 0.
+	//We are setting our inital screen to screen 0 (Splash Screen).
 	int screen = 0;
 	//Make window
-	
 	//desktop = sf::VideoMode::getDesktopMode();
 	sf::VideoMode desktop = sf::VideoMode::getDesktopMode();
-	sf::RenderWindow window(desktop, "Gravity Simulator", sf::Style::Fullscreen);
-	//For splash screen, no mouse.
-	window.setMouseCursorVisible(false);
+	sf::RenderWindow window(desktop, "Gravity Simulator"/*,sf::Style::Fullscreen*/);
 	//Adding screens to vector
 	SplashScreen splashscreen;
 	screens.push_back(&splashscreen);

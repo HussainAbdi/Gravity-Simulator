@@ -1,4 +1,6 @@
 #include "Precompiled.h"
+#include "cScreen.h"
+#include "MenuScreen.h"
 /*
 Add textures at beginning for different states.
 Button class?
@@ -20,9 +22,9 @@ int MenuScreen::Run(sf::RenderWindow &window) {
 	//int alpha = 0;
 	sf::Event event;
 	bool running = true;
-	std::vector<sf::Texture> textures;
+	//std::vector<sf::Texture> textures;
 	// Test area
-	sf::Texture mainMenuNoSave;
+	/*sf::Texture mainMenuNoSave;
 	sf::Texture newButtonFilled;
 	//
 	sf::Texture mainMenuNormal;
@@ -36,8 +38,6 @@ int MenuScreen::Run(sf::RenderWindow &window) {
 	sf::Sprite buttonLoad;
 	sf::Sprite buttonSave;
 	sf::Sprite buttonExit;
-	int alpha = 0;
-	int menu = 0;
 	window.setMouseCursorVisible(true);
 	if (!mainMenuNoSave.loadFromFile("images/filled buttons/TestNoNew.png"))
 	{
@@ -50,7 +50,9 @@ int MenuScreen::Run(sf::RenderWindow &window) {
 	}
 	background.setTexture(mainMenuNoSave);
 	buttonNew.setTexture(newButtonFilled); //682 332
-	buttonNew.setPosition(sf::Vector2f(682, 332));
+	buttonNew.setPosition(sf::Vector2f(682, 332));*/
+	int alpha = 0;
+	int menu = 0;
 	/*if (!Font.loadFromFile("batmfa.ttf"))
 	{
 		std::cerr << "Error loading verdanab.ttf" << std::endl;
@@ -122,15 +124,16 @@ int MenuScreen::Run(sf::RenderWindow &window) {
 		if (alpha<alpha_max)
 		{
 			alpha++;
-			background.setColor(sf::Color(255, 255, 255, alpha / alpha_div));
+			/*background.setColor(sf::Color(255, 255, 255, alpha / alpha_div));
+			buttonNew.setColor(sf::Color(255, 255, 255, alpha / alpha_div));*/
 		}
 		
 
 		//Clearing screen
 		window.clear();
 		//Drawing
-		window.draw(background);
-		window.draw(buttonNew);
+		/*window.draw(background);
+		window.draw(buttonNew);*/
 		window.display();
 	}
 }

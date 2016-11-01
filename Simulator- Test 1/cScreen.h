@@ -8,7 +8,9 @@ public:
 	//Use of polymorphism. The 'Run' function will be used in the different screens, doing different things.
 	//This function will return a number. Based on which number is returned, a screen will be output or the application will terminate.
 	//In the main, when -1 is returned, the application terminates.
+	std::vector<cScreen*> screens;
 	virtual int Run(sf::RenderWindow &window) = 0;
-	sf::Texture * getTexture(sf::Texture *p_texture, std::string location);
+private:
+
 };
 

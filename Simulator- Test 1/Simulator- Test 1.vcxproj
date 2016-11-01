@@ -121,22 +121,40 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BackgroundBase.cpp" />
     <ClCompile Include="ButtonBase.cpp" />
     <ClCompile Include="cScreen.cpp" />
+    <ClCompile Include="GameButton.cpp" />
+    <ClCompile Include="GraphicsDirector.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MenuBackground.cpp" />
+    <ClCompile Include="MenuButton.cpp" />
     <ClCompile Include="MenuScreen.cpp" />
+    <ClCompile Include="ObjectBase.cpp" />
     <ClCompile Include="Precompiled.cpp" />
+    <ClCompile Include="SimulationBackground.cpp" />
+    <ClCompile Include="SimulatorDirector.cpp" />
     <ClCompile Include="SimulatorScreen.cpp" />
+    <ClCompile Include="SplashBackground.cpp" />
     <ClCompile Include="SplashScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BackgroundBase.h" />
     <ClInclude Include="ButtonBase.h" />
     <ClInclude Include="buttons.h" />
     <ClInclude Include="cScreen.h" />
+    <ClInclude Include="GameButton.h" />
+    <ClInclude Include="GraphicsDirector.h" />
+    <ClInclude Include="MenuBackground.h" />
+    <ClInclude Include="MenuButton.h" />
     <ClInclude Include="MenuScreen.h" />
+    <ClInclude Include="ObjectBase.h" />
     <ClInclude Include="Precompiled.h" />
     <ClInclude Include="screens.h" />
+    <ClInclude Include="SimulationBackground.h" />
+    <ClInclude Include="SimulatorDirector.h" />
     <ClInclude Include="SimulatorScreen.h" />
+    <ClInclude Include="SplashBackground.h" />
     <ClInclude Include="SplashScreen.h" />
   </ItemGroup>
   <ItemGroup>

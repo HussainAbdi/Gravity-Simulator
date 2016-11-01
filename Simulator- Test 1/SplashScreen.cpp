@@ -1,4 +1,6 @@
 #include "Precompiled.h"
+#include "cScreen.h"
+#include "SplashScreen.h"
 /*
 Had to decide whether needed to load one image each time or seperate images. Decided one image. 
 Reasons:
@@ -18,17 +20,13 @@ int SplashScreen::Run(sf::RenderWindow &window) {
 	sf::Event event; 
 	bool running = true; 
 	bool timerStarted = false; //
-	sf::Texture texture;
+	sf::Texture splashBackground;
 	sf::Sprite sprite;
 	int alpha = 0;
 	sf::Clock clock;
-
-	if (!texture.loadFromFile("images/Final Splash Screen.png"))
-	{
-		std::cerr << "Error loading presentation.gif" << std::endl;
-		return (-1);
-	}
-	sprite.setTexture(texture);
+	sprite.setTexture(*this->getTexture(&splashBackground,"images/Final Splash Screen.png"));
+	//For splash screen, mouse should not be visible
+	window.setMouseCursorVisible(false);
 	//Sprite.setColor(sf::Color(255, 0, 0, alpha));
 
 	while (running)
