@@ -1,10 +1,8 @@
-#include "Precompiled.h"
-#include "cScreen.h"
+// Page: MenuScreen.cpp
 #include "MenuScreen.h"
 /*
-Add textures at beginning for different states.
-Button class?
 */
+
 
 
 MenuScreen::MenuScreen()
@@ -12,71 +10,18 @@ MenuScreen::MenuScreen()
 	//Alpha used here to set opacity of images/textures
 	this->alpha_max = 3 * 255; //Maximun opacity
 	this->alpha_div = 3; //Minimum opacity
-	this->playing = false;
+	//Initialise the music
+	initMusic();
 
 }
 
-int MenuScreen::Run(sf::RenderWindow &window) {
-	//sf::Event event;
-	//bool Running = true;
-	//int alpha = 0;
+int MenuScreen::run(sf::RenderWindow &window, Simulation& simulation) {
+	//Initialise the variables needed for this screen
 	sf::Event event;
 	bool running = true;
-	//std::vector<sf::Texture> textures;
-	// Test area
-	/*sf::Texture mainMenuNoSave;
-	sf::Texture newButtonFilled;
-	//
-	sf::Texture mainMenuNormal;
-	sf::Texture mainMenuHoverNew;
-	sf::Texture mainMenuHoverLoad;
-	sf::Texture mainMenuHoverSave;
-	sf::Texture mainMenuHoverExit;
-	sf::Texture mainMenuGreySave;
-	sf::Sprite background;
-	sf::Sprite buttonNew;
-	sf::Sprite buttonLoad;
-	sf::Sprite buttonSave;
-	sf::Sprite buttonExit;
-	window.setMouseCursorVisible(true);
-	if (!mainMenuNoSave.loadFromFile("images/filled buttons/TestNoNew.png"))
-	{
-		std::cerr << "Error loading Main Menu no save." << std::endl;
-		return (-1);
-	}
-	if (!newButtonFilled.loadFromFile("images/filled buttons/New white.png")) {
-		std::cerr << "Error loading save button." << std::endl;
-		return (-1);
-	}
-	background.setTexture(mainMenuNoSave);
-	buttonNew.setTexture(newButtonFilled); //682 332
-	buttonNew.setPosition(sf::Vector2f(682, 332));*/
 	int alpha = 0;
-	int menu = 0;
-	/*if (!Font.loadFromFile("batmfa.ttf"))
-	{
-		std::cerr << "Error loading verdanab.ttf" << std::endl;
-		return (-1);
-	}
-	Menu1.setFont(Font);
-	Menu1.setCharacterSize(20);
-	Menu1.setString("Play");
-	Menu1.setPosition({ 280.f, 160.f });
-
-	Menu2.setFont(Font);
-	Menu2.setCharacterSize(20);
-	Menu2.setString("Exit");
-	Menu2.setPosition({ 280.f, 220.f });
-
-	Menu3.setFont(Font);
-	Menu3.setCharacterSize(20);
-	Menu3.setString("Continue");
-	Menu3.setPosition({ 280.f, 160.f });*/
-
-	if (playing)
-	{
-		alpha = alpha_max;
-	}
+	window.setMouseCursorVisible(true);
+	this->menuMusic.play();
 
 	while (running)
 	{
@@ -87,6 +32,7 @@ int MenuScreen::Run(sf::RenderWindow &window) {
 			if (event.type == sf::Event::Closed)
 			{
 				window.close();
+				exit(0);
 			}
 			//Key pressed
 			if (event.type == sf::Event::KeyPressed)
@@ -94,50 +40,65 @@ int MenuScreen::Run(sf::RenderWindow &window) {
 				switch (event.key.code)
 				{
 				case sf::Keyboard::Up:
-					menu = 0;
 					break;
 				case sf::Keyboard::Down:
-					menu = 1;
 					break;
 				case sf::Keyboard::Return:
-					if (menu == 0)
-					{
-						//Let's get play !
-						playing = true;
-						return (1);
-					}
-					else
-					{
-						//Let's get work...
-						return (-1);
-					}
-					break;
-				case sf::Keyboard::Escape:
-					window.close();
 					break;
 				default:
 					break;
 				}
 			}
+			//Mouse Released
+			if (event.type == sf::Event::MouseButtonReleased) {
+				int buttonNum = NULL;
+				for (int i = 0; i < 2; i++) {
+					if (simulation.guiDirector->getMenuButtons()[i]->isMouseOver(window)) {
+						int screen;
+						buttonNum = i;
+						screen = simulation.guiDirector->getMenuButtons()[i]->updateDerived(window);
+						this->menuMusic.stop();
+						if (screen != 1) {
+							return screen;
+						}
+					}
+				}
+
+			}
 		}
-		//When getting at alpha_max, we stop modifying the sprite
-		if (alpha<alpha_max)
+		//Hover animation check
+		for (int i = 0; i < 2; i++) {
+			simulation.guiDirector->getMenuButtons()[i]->update(window);
+		}
+
+		//When getting at alpha_max, we stop modifying the objects
+		if (alpha < alpha_max)
 		{
 			alpha++;
-			/*background.setColor(sf::Color(255, 255, 255, alpha / alpha_div));
-			buttonNew.setColor(sf::Color(255, 255, 255, alpha / alpha_div));*/
+			simulation.guiDirector->getMenu()->setColour(sf::Color(255, 255, 255, alpha / alpha_div));
+			for (int i = 0; i < 2; i++) {
+				simulation.guiDirector->getMenuButtons()[i]->setColour(sf::Color(255, 255, 255, alpha / alpha_div));
+			}
 		}
-		
+
 
 		//Clearing screen
 		window.clear();
 		//Drawing
-		/*window.draw(background);
-		window.draw(buttonNew);*/
+		window.draw(*simulation.guiDirector->getMenu());
+		for (int i = 0; i < 2; i++) {
+			window.draw(*simulation.guiDirector->getMenuButtons()[i]);
+		}
 		window.display();
 	}
 }
 
-void loadTexture(sf::Texture texture, std::string location) {
-
+void MenuScreen::initMusic()
+{
+	std::string location = "sound/menu/menu-music.wav";
+	if (!this->menuMusic.openFromFile(location)) {
+		std::cerr << location << " not loaded" << std::endl;
+	}
+	this->menuMusic.setVolume(100);
+	this->menuMusic.setLoop(true);
 }

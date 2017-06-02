@@ -81,9 +81,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\hussa\Desktop\Equinox Engine\SFML-2.3.2\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SFML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-system-s-d.lib;sfml-audio-s-d.lib;opengl32.lib;freetype.lib;jpeg.lib;winmm.lib;gdi32.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\hussa\Desktop\Equinox Engine\SFML-2.3.2\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -100,11 +103,17 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\hussa\Desktop\Equinox Engine\SFML-2.3.2\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SFML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-graphics-s.lib	;sfml-window-s.lib;sfml-system-s.lib;sfml-audio-s.lib;opengl32.lib;freetype.lib;jpeg.lib;winmm.lib;gdi32.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\hussa\Desktop\Equinox Engine\SFML-2.3.2\lib</AdditionalLibraryDirectories>
+      <SubSystem>NotSet</SubSystem>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -121,44 +130,54 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BackgroundBase.cpp" />
+    <ClCompile Include="Background.cpp" />
     <ClCompile Include="ButtonBase.cpp" />
+    <ClCompile Include="Celestial.cpp" />
     <ClCompile Include="cScreen.cpp" />
     <ClCompile Include="GameButton.cpp" />
+    <ClCompile Include="Constants.cpp" />
     <ClCompile Include="GraphicsDirector.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MenuBackground.cpp" />
     <ClCompile Include="MenuButton.cpp" />
     <ClCompile Include="MenuScreen.cpp" />
+    <ClCompile Include="Moon.cpp" />
     <ClCompile Include="ObjectBase.cpp" />
+    <ClCompile Include="Planet.cpp" />
     <ClCompile Include="Precompiled.cpp" />
-    <ClCompile Include="SimulationBackground.cpp" />
-    <ClCompile Include="SimulatorDirector.cpp" />
+    <ClCompile Include="SimulationDirector.cpp" />
+    <ClCompile Include="Simulation.cpp" />
     <ClCompile Include="SimulatorScreen.cpp" />
-    <ClCompile Include="SplashBackground.cpp" />
     <ClCompile Include="SplashScreen.cpp" />
+    <ClCompile Include="Star.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BackgroundBase.h" />
+    <ClInclude Include="Background.h" />
     <ClInclude Include="ButtonBase.h" />
     <ClInclude Include="buttons.h" />
+    <ClInclude Include="Celestial.h" />
     <ClInclude Include="cScreen.h" />
     <ClInclude Include="GameButton.h" />
+    <ClInclude Include="Constants.h" />
     <ClInclude Include="GraphicsDirector.h" />
-    <ClInclude Include="MenuBackground.h" />
     <ClInclude Include="MenuButton.h" />
     <ClInclude Include="MenuScreen.h" />
+    <ClInclude Include="Moon.h" />
     <ClInclude Include="ObjectBase.h" />
+    <ClInclude Include="Planet.h" />
     <ClInclude Include="Precompiled.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="screens.h" />
-    <ClInclude Include="SimulationBackground.h" />
-    <ClInclude Include="SimulatorDirector.h" />
+    <ClInclude Include="SimulationDirector.h" />
+    <ClInclude Include="Simulation.h" />
     <ClInclude Include="SimulatorScreen.h" />
-    <ClInclude Include="SplashBackground.h" />
     <ClInclude Include="SplashScreen.h" />
+    <ClInclude Include="Star.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Simulator- Test 1.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

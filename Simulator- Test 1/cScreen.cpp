@@ -1,3 +1,3 @@
-#include "Precompiled.h"
+// Page: cScreen.cpp
 #include "cScreen.h"
-//If Nothing here by the end of project, delete
+//This page is here because future versions may have implementations of the base screen class in the .cpp file

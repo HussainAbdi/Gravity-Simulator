@@ -13,6 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Buttons">
+      <UniqueIdentifier>{09d3f764-8116-45e6-8f15-8bf044c49c66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Backgrounds">
+      <UniqueIdentifier>{133d57c2-a50a-413f-9b44-54936d04c797}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Screens">
+      <UniqueIdentifier>{df4bf9c2-06af-4da5-8c41-24aaed7b9b44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Directors">
+      <UniqueIdentifier>{f1e64e10-6c7b-4fb7-88a6-515999835322}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Buttons">
+      <UniqueIdentifier>{084aadad-7d3f-423d-9389-4cf39337472d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Backgrounds">
+      <UniqueIdentifier>{664a8e31-eab5-423c-a2e4-3144c470606f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Directors">
+      <UniqueIdentifier>{b995837e-4e3a-41d9-9f50-fe866c7b3c79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Screens">
+      <UniqueIdentifier>{67510077-652c-4cd0-9ec1-8517ce9cd14a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Celestial">
+      <UniqueIdentifier>{7aaadf52-f6b3-4cc3-885a-7aec6466d3da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Celestial">
+      <UniqueIdentifier>{727bcd96-cb70-4c4a-b898-5c3963e65198}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -21,105 +51,131 @@
     <ClCompile Include="Precompiled.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="cScreen.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuScreen.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SimulatorScreen.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SplashScreen.cpp">
+    <ClCompile Include="ObjectBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ButtonBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuButton.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Buttons</Filter>
     </ClCompile>
     <ClCompile Include="GameButton.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Buttons</Filter>
     </ClCompile>
-    <ClCompile Include="SimulatorDirector.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="MenuButton.cpp">
+      <Filter>Source Files\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="cScreen.cpp">
+      <Filter>Source Files\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuScreen.cpp">
+      <Filter>Source Files\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="SimulatorScreen.cpp">
+      <Filter>Source Files\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="SplashScreen.cpp">
+      <Filter>Source Files\Screens</Filter>
     </ClCompile>
     <ClCompile Include="GraphicsDirector.cpp">
+      <Filter>Source Files\Directors</Filter>
+    </ClCompile>
+    <ClCompile Include="Background.cpp">
+      <Filter>Source Files\Backgrounds</Filter>
+    </ClCompile>
+    <ClCompile Include="Celestial.cpp">
+      <Filter>Source Files\Celestial</Filter>
+    </ClCompile>
+    <ClCompile Include="Planet.cpp">
+      <Filter>Source Files\Celestial</Filter>
+    </ClCompile>
+    <ClCompile Include="Star.cpp">
+      <Filter>Source Files\Celestial</Filter>
+    </ClCompile>
+    <ClCompile Include="SimulationDirector.cpp">
+      <Filter>Source Files\Directors</Filter>
+    </ClCompile>
+    <ClCompile Include="Simulation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BackgroundBase.cpp">
+    <ClCompile Include="Constants.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SplashBackground.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuBackground.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SimulationBackground.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjectBase.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Moon.cpp">
+      <Filter>Source Files\Celestial</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Precompiled.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="cScreen.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="screens.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MenuScreen.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SimulatorScreen.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SplashScreen.h">
+    <ClInclude Include="ObjectBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ButtonBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="buttons.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MenuButton.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Buttons</Filter>
     </ClInclude>
     <ClInclude Include="GameButton.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Buttons</Filter>
     </ClInclude>
-    <ClInclude Include="SimulatorDirector.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="MenuButton.h">
+      <Filter>Header Files\Buttons</Filter>
     </ClInclude>
     <ClInclude Include="GraphicsDirector.h">
+      <Filter>Header Files\Directors</Filter>
+    </ClInclude>
+    <ClInclude Include="buttons.h">
+      <Filter>Header Files\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuScreen.h">
+      <Filter>Header Files\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="cScreen.h">
+      <Filter>Header Files\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="screens.h">
+      <Filter>Header Files\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="SimulatorScreen.h">
+      <Filter>Header Files\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="SplashScreen.h">
+      <Filter>Header Files\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="Background.h">
+      <Filter>Header Files\Backgrounds</Filter>
+    </ClInclude>
+    <ClInclude Include="Celestial.h">
+      <Filter>Header Files\Celestial</Filter>
+    </ClInclude>
+    <ClInclude Include="Planet.h">
+      <Filter>Header Files\Celestial</Filter>
+    </ClInclude>
+    <ClInclude Include="Star.h">
+      <Filter>Header Files\Celestial</Filter>
+    </ClInclude>
+    <ClInclude Include="SimulationDirector.h">
+      <Filter>Header Files\Directors</Filter>
+    </ClInclude>
+    <ClInclude Include="Simulation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BackgroundBase.h">
+    <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SplashBackground.h">
+    <ClInclude Include="Constants.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MenuBackground.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SimulationBackground.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjectBase.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Moon.h">
+      <Filter>Header Files\Celestial</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd">
       <Filter>Source Files</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Simulator- Test 1.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

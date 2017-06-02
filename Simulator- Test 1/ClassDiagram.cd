@@ -1,31 +1,196 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Celestial" Collapsed="true">
-    <Position X="6.25" Y="1" Width="1.5" />
+  <Class Name="Celestial">
+    <Position X="10" Y="5.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Typedef Name="Celestial::Vector2d" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Celestial.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Struct Name="Celestial::Derivatives">
+        <TypeIdentifier>
+          <NewMemberFileName>Celestial.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <InheritanceLine Type="ObjectBase" ManuallyRouted="true">
+      <Path>
+        <Point X="6.75" Y="3.401" />
+        <Point X="6.75" Y="4.619" />
+        <Point X="11.125" Y="4.619" />
+        <Point X="11.125" Y="5.25" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAABAAAAAAEAAAAAAQQAAAAAAAAAIA=</HashCode>
+      <HashCode>tYQggLBQWAAhBCEAAAAIAAAiUJCMEARRQFTMDINIgLA=</HashCode>
       <FileName>Celestial.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Manifold" Collapsed="true">
-    <Position X="1" Y="0.5" Width="1.5" />
+  <Class Name="Planet">
+    <Position X="8" Y="11.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Manifold.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Planet" Collapsed="true">
-    <Position X="5" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAgAAACAAAAAAAAAAAAAAAAAAAAAAAAIIAAAAAIAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAIAAAAAIAA=</HashCode>
       <FileName>Planet.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Star" Collapsed="true">
-    <Position X="7.5" Y="2.25" Width="1.5" />
+  <Class Name="Star">
+    <Position X="13.5" Y="9.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAgAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAABAAQAAAgAAAAAAAAAA=</HashCode>
       <FileName>Star.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="gui::Background">
+    <Position X="5.75" Y="5" Width="2" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="gui::Background::Type">
+        <TypeIdentifier>
+          <NewMemberFileName>Background.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAIAAgAAEAAAAAIQAAAgAAAAIAA=</HashCode>
+      <FileName>Background.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="gui::ButtonBase">
+    <Position X="2.75" Y="5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="gui::ButtonBase::Menu">
+        <TypeIdentifier>
+          <NewMemberFileName>ButtonBase.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="gui::ButtonBase::Game">
+        <TypeIdentifier>
+          <NewMemberFileName>ButtonBase.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="gui::ButtonBase::State">
+        <TypeIdentifier>
+          <NewMemberFileName>ButtonBase.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <InheritanceLine Type="ObjectBase" ManuallyRouted="true">
+      <Path>
+        <Point X="6.75" Y="3.401" />
+        <Point X="6.75" Y="4.62" />
+        <Point X="3.5" Y="4.62" />
+        <Point X="3.5" Y="5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>wAAACABAAAAAABEAAAAAIAgCAAABAEYQAAAAAAAERQw=</HashCode>
+      <FileName>ButtonBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="gui::GameButton">
+    <Position X="0.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AADAAAgAAAAAAAAAAAIAAAAAAAAAAAIABAAAAAAABAA=</HashCode>
+      <FileName>GameButton.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="gui::MenuButton">
+    <Position X="5.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAIAAAAAAAAAAIAAAAAAAAAAAYAAAAAAAAABAA=</HashCode>
+      <FileName>MenuButton.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuScreen">
+    <Position X="17" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAgAAAAAAAAQAAAgIAAAEAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MenuScreen.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Moon">
+    <Position X="13.5" Y="11.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAEAAAAAAAAAAAAAABAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Moon.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectBase">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CgQAAAQAAAAAAgQAAAAIAAAIAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>ObjectBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Simulation">
+    <Position X="23.75" Y="8.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Simulation::State">
+        <TypeIdentifier>
+          <NewMemberFileName>Simulation.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AASAAYAAAABAEDgEAAAAgAAABhIAAAABHQAAJACEIwA=</HashCode>
+      <FileName>Simulation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimulationDirector">
+    <Position X="27.25" Y="10" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="SimulationDirector::Mode">
+        <TypeIdentifier>
+          <NewMemberFileName>SimulationDirector.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAIAAABAAAAAAIAIAAIAAAEAAOAEAgAQAAAAhAAAAAQ=</HashCode>
+      <FileName>SimulationDirector.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimulatorScreen">
+    <Position X="19.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAACAAQAAAgIAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>SimulatorScreen.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SplashScreen">
+    <Position X="21.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAASAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SplashScreen.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cScreen">
+    <Position X="19.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>cScreen.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GraphicsDirector">
+    <Position X="20.25" Y="10" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ARAAoAEAgAABBoQAgRhJACqAAACgUAARJQFAAMQgIIQ=</HashCode>
+      <FileName>GraphicsDirector.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
